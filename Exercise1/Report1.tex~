@@ -1,0 +1,19 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{Programing Techniques for Scientific Simulations}
+\subtitle{Report 1}
+\author{Marion Baumgartner}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+gtfshz
+\end{abstract}
+
+\section{rata}
+
+\end{document}
