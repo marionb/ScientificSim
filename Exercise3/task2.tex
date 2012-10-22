@@ -1,0 +1,27 @@
+Problem 3.2: Penna model (reading)
+
+Concepts:
+
+	The paper describes the computer simulation of an aging model to understand the survival rates of a population. The population consists of individuals which are characterized by genomes. The genomes contain information about when mutations occur in the live of the individuals. The mutations can be good or bad and if too many mutations accrue the individual dies.
+	Further, the population is affected by the amount of food which exists and the amount of space. There can not be more than $N_{max}$ individuals.
+	A next point which is considered in the simulations is reproduction. Individuals can have offspring once thy reach a certain age R. The genome of the offspring is identical to the one of the Parent up to a certain fraction M which is chosen randomly.
+The Results of the simulations show that if the mutation rate M is larger, it will take less time to reach an equilibrium. Further, if the minimal age for reproduction is set higher there are more runaway values where individuals die at higher age. However the average life time expectancy is decreases. This causes the total population to shrink.
+
+
+Individuals:
+
+What they have in commune
+	Verhulst factor
+	reproduction rate R
+	fraction M of randomly chosen bits in a genome (mutation rate)
+	genome size B
+
+What the have different
+	the specific genome
+	age
+
+How to program:
+
+I would represent an individual in my code using an array. Perhaps it is smart to create a class for the individuals where we have the variables which are the same for all individuals as constants which are set with the first individual and then are kept the same for all the rest. Then we should have variable for the age of each individual. Further there ought to be a function which can crate a new individual (reproduction function) and a function which calculates weather the individual is kept alive or weather it is deleted.
+
+
