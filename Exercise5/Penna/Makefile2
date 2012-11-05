@@ -1,0 +1,21 @@
+# simple Makefile
+
+COMPILER = g++
+FLAGS = -O0
+
+all: penna
+
+runn: main.o animal.o genome.o
+	$(COMPILER) $(FLAGS) -c main.o animal.o genome.o
+
+main.o: main.cpp  penna_animal.hpp penna_genome.hpp
+	$(COMPILER) $(FLAGS) -c main.cpp
+
+animal.o: penna_animal.cpp penna_animal.hpp penna_genome.hpp
+	$(COMPILER) $(FLAGS) -c penna_animal.cpp 
+
+genome.o: penna_genome.cpp penna_genome.hpp
+	$(COMPILER) $(FLAGS) -c penna_genome.cpp
+
+clean: 
+	rm -f main.o animal.o genome.o runn

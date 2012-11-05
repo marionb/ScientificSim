@@ -27,32 +27,29 @@
 *       Return the numerical integration using the Simpson rule of the function func
 *       in the intervall [a,b]
 */
-double simpson(double (*func)(double), double a, double b, int N)
+double sompson_int(Function &f,const double &a,const double &b, unsigned N)
 {
-    if(N%2!=0)
-    {
-        std::cout<<"Error Number of bins N has to be even!\n";
-        return 0;
-    }
-
     double h=(b-a)/double(N);
+    unsigned N_half=N/2
     double xOld=a;
-    double xNew=a;
-    double sum1=0;
-    double sum2=0;
+    //double xNew=a;
+    double sum_even=0;
+    double sum_odd=0;
     double sim;
 
-    for(int i=1;i<=N;i++)
+    for(unsigned i=1;i<N_half;i++)
     {
-        xNew=a+(i-1)*h;
-        xOld=a+i*h;
+        xOld+=h
+        sum_odd+=f(xOld);
+        x_Old+=h
+        sum_even+=f(xOld);
 
-        sum2+=(*func)((xNew+xOld)/2.0);
-        if(i>1)
-        {
-            sum1+=func(xOld);
-        }
     }
-    sim=h/3.0*(0.5*(*func)(a)+sum1+2*sum2+0.5*(*func)(b));
+    //sum goes only up to N/2-1 and we want to go up to N/2 for the odd summ so we add one mor
+    xOld+=h
+    sum_odd+=f(xOld);
+
+    //sum up the whole thing
+    sim=h/3.0*(f(a)+2*sum_even+4*sum_odd+f(b));
     return sim;
 }
