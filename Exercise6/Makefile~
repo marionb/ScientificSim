@@ -1,0 +1,16 @@
+COMPILER = g++
+FLAGS  = -O0
+
+all: cache plot
+
+
+main: main.o 
+	$(COMPILER) $(FLAGS) main.o -o main
+
+main.o: main.cpp
+	$(COMPILER) $(FLAGS) -c main.cpp
+
+plot: plots1b.py
+	python plots1b.py
+clean:
+	rm -f *.o *.a
