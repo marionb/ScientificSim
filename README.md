@@ -1,0 +1,34 @@
+This folder Contains the solotions for the Exerxixe of the 
+Lecture "Prog. Techniques for Scientiffic Simulations"
+
+Here a short description of the Exercices ir given:
+
+Exercise 1:
+
+=============================================================================
+Exercise 2:
+
+=============================================================================
+Exercise 3:
+
+=============================================================================
+Exercise 4:
+
+=============================================================================
+Exercise 5:
+
+=============================================================================
+Exercise 6:
+	Problem 7.1: Benchmarking standart containers
+	benchmark the time required to randomly insert and delete in the
+	three containers provided vector, list and set
+
+	Problem 7.2: Penna Model Implementation
+	Implement a Population class and prerforme major OP
+		-> use graphs for results
+	
+=============================================================================
+Exercise 7:
+
+=============================================================================
+Exercise 8:
