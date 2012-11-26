@@ -8,8 +8,9 @@
 *                   Numerical integration of f(x) with x in [a,b] and N bins
 */
 
-#include <iostream>
-#include "simpson.h"
+#include <cstdlib>
+#include <cassert>
+#include "simpson.hpp"
 
 
 /**
@@ -27,10 +28,13 @@
 *       Return the numerical integration using the Simpson rule of the function func
 *       in the intervall [a,b]
 */
-double sompson_int(Function &f,const double &a,const double &b, unsigned N)
+double simpson_int(double (*f)(double),const double &a,const double &b, unsigned N)
 {
+
+    assert(N>0); //assert the conditions above hold. If not abort -> not very nice though!
+    //assert(f!= NULL);
     double h=(b-a)/double(N);
-    unsigned N_half=N/2
+    unsigned N_half=N/2;
     double xOld=a;
     //double xNew=a;
     double sum_even=0;
@@ -39,14 +43,14 @@ double sompson_int(Function &f,const double &a,const double &b, unsigned N)
 
     for(unsigned i=1;i<N_half;i++)
     {
-        xOld+=h
+        xOld+=h;
         sum_odd+=f(xOld);
-        x_Old+=h
+        xOld+=h;
         sum_even+=f(xOld);
 
     }
-    //sum goes only up to N/2-1 and we want to go up to N/2 for the odd summ so we add one mor
-    xOld+=h
+    //sum goes only up to N/2-1 and we want to go up to N/2 for the odd summ so we add one more
+    xOld+=h;
     sum_odd+=f(xOld);
 
     //sum up the whole thing

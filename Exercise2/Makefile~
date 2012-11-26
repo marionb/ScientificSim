@@ -1,5 +1,5 @@
 # simple Makefile
-#buggy !!!
+
 COMPILER = g++
 FLAGS = -O0
 

@@ -1,0 +1,18 @@
+top
+# Programming Techniques for Scientific Simulations, HS 2012
+# Exercise 6
+# by Jakub Imriska
+
+COMPILER = g++
+FLAGS = -O3 -funroll-loops
+
+all: simpson cache
+
+simpson: simpson_main.cpp simpson.hpp float_type.hpp
+	$(COMPILER) $(FLAGS) simpson_main.cpp -o simpson
+
+cache: cache.cpp
+	$(COMPILER) $(FLAGS) cache.cpp -o cache
+
+clean:
+	rm -f *.o simpson
