@@ -1,0 +1,10 @@
+COMPILER = g++
+FLAGS = 
+
+all: simpsonHC
+
+simpson: simpsonHC.cpp
+	$(COMPILER) $(FLAGS) simpsonHC.cpp -o simpson
+
+clean:
+	rm -f simpson

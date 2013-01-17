@@ -1,0 +1,17 @@
+CC = g++
+DEBUG = -g
+CFLAG = -c $(DEBUG)
+
+all: penna
+
+penna: main.o penna_genome.o
+	$(CC) main.o penna_genome.o -o penna
+
+main.o: main.cpp penna_genome.hpp
+	$(CC) main.cpp $(CFLAG)
+
+penna_genome.o: penna_genome.cpp penna_genome.hpp
+	$(CC) penna_genome.cpp $(CFLAG)
+
+clean:
+	\rm *.o penna

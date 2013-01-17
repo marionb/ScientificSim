@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1357745027 source:/home/marion/Documents/CompMethods/Problems/ScientificSim/ExamPractice/Penna/PennaModel/main.cpp
+	<iostream>
+	"../penna_genome.hpp"
+
+1357746774 /home/marion/Documents/CompMethods/Problems/ScientificSim/ExamPractice/Penna/penna_genome.hpp
+	<iostream>
+	<bitset>
+
+1357742726 source:/home/marion/Documents/CompMethods/Problems/ScientificSim/ExamPractice/Penna/penna_animal.cpp
+	"penna_genome.hpp"
+	<iostream>
+
+1357747015 source:/home/marion/Documents/CompMethods/Problems/ScientificSim/ExamPractice/Penna/penna_genome.cpp
+	<cassert>
+	<cstdlib>
+	"penna_genome.hpp"
+
